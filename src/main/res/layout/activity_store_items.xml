@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".StoreItems">
+
+    <AutoCompleteTextView
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_textbox"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:hint="search book"
+        android:paddingLeft="30dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="22sp"
+        tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry,TextFields" />
+
+
+    <TextView
+        android:id="@+id/tvStoreName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="STORE NAME"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:scrollHorizontally="false"
+        android:inputType="textMultiLine"
+        android:singleLine="false"/>
+
+    <Button
+        android:id="@+id/btViewCart"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tvStoreName"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/car_button"
+        android:backgroundTint="@null"
+        android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
+        android:onClick="Cartpage"
+        android:text="CART"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btViewCart"
+        android:layout_marginTop="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>

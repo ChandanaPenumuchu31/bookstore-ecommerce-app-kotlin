@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Cart_view">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvcart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="                  CART"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/CartList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tvcart"
+                android:layout_marginTop="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotalCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CartList"
+                android:layout_marginLeft="30dp"
+                android:text=""
+                android:textColor="#228B22"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btViewtotal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/round_btn"
+                android:onClick="viewtotal"
+                android:text="VIEW TOTAL"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btViewDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_btn"
+                android:onClick="viewdiscount"
+                android:text="VIEW DISCOUNT"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btAddDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/round_btn"
+                android:onClick="addiscount"
+                android:text="ADD DISCOUNT"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:id="@+id/tvdelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text="  ENTER DELIVERY LOCATION"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvTotalCost"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_layout"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:hint="   Enter Name "
+                android:paddingLeft="30dp"
+                android:shadowColor="#776E6E"
+                android:shadowRadius="0.2"
+                android:textColor="@color/black"
+                android:textColorHint="#776E6E"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/etStreet"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvTotalCost"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_layout"
+                android:drawableLeft="@drawable/ic_baseline_edit_note_24"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:hint="   Enter area,street no "
+                android:paddingLeft="30dp"
+                android:shadowColor="#776E6E"
+                android:shadowRadius="0.2"
+                android:textColor="@color/black"
+                android:textColorHint="#776E6E"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvTotalCost"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_layout"
+                android:drawableLeft="@drawable/ic_baseline_edit_note_24"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:hint="   Enter City,State "
+                android:paddingLeft="30dp"
+                android:shadowColor="#776E6E"
+                android:shadowRadius="0.2"
+                android:textColor="@color/black"
+                android:textColorHint="#776E6E"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/etPincode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvTotalCost"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_layout"
+                android:drawableLeft="@drawable/ic_baseline_edit_note_24"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:hint="   Enter Pincode "
+                android:paddingLeft="30dp"
+                android:shadowColor="#776E6E"
+                android:shadowRadius="0.2"
+                android:textColor="@color/black"
+                android:textColorHint="#776E6E"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/etContact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvTotalCost"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_layout"
+                android:drawableLeft="@drawable/ic_baseline_contacts_24"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:hint="   Enter Phone number "
+                android:paddingLeft="30dp"
+                android:shadowColor="#776E6E"
+                android:shadowRadius="0.2"
+                android:textColor="@color/black"
+                android:textColorHint="#776E6E"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/btPay"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tvStoreName"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/car_button"
+                android:backgroundTint="@null"
+                android:drawableLeft="@drawable/ic_baseline_payment_24"
+                android:onClick="PayNow"
+                android:text=" CHECK OUT"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="10dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

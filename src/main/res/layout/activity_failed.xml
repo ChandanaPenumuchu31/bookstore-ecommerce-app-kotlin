@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2d085"
+    tools:context=".Failed">
+    <ImageView
+        android:id="@+id/ivlogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/auroraa"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <TextView
+        android:id="@+id/fail"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/ivlogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="FAILED"
+        android:textColor="#880808"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btfeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@id/fail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/round_btn"
+        android:onClick="openfeedback"
+        android:text="GIVE FEEDBACK"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/btfeedback"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/round_btn"
+        android:onClick="openstore"
+        android:text="OPEN STORE"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+
+        />
+
+</RelativeLayout>
